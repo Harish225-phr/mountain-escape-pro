@@ -1,24 +1,52 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Navbar } from "@/components/Navbar";
+import { Hero } from "@/components/Hero";
+import { TrustStats } from "@/components/TrustStats";
+import { About } from "@/components/About";
+import { ViewSection } from "@/components/ViewSection";
+import { Accommodation } from "@/components/Accommodation";
+import { BambooFeature } from "@/components/BambooFeature";
+import { FamilyPet } from "@/components/FamilyPet";
+import { Experiences } from "@/components/Experiences";
+import { Dining } from "@/components/Dining";
+import { StayWithUs } from "@/components/StayWithUs";
+import { ExploreShoghi } from "@/components/ExploreShoghi";
+import { Gallery } from "@/components/Gallery";
+import { GuestExperience } from "@/components/GuestExperience";
+import { BookingForm } from "@/components/BookingForm";
+import { FAQ } from "@/components/FAQ";
+import { Location } from "@/components/Location";
+import { Footer } from "@/components/Footer";
+import { FloatingContactButtons } from "@/components/FloatingContactButtons";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <>
+      <Navbar />
+      <main>
+        <Hero />
+        <TrustStats />
+        <About />
+        <ViewSection />
+        <Accommodation />
+        <BambooFeature />
+        <FamilyPet />
+        <Experiences />
+        <Dining />
+        <StayWithUs />
+        <ExploreShoghi />
+        <Gallery />
+        <GuestExperience />
+        <BookingForm />
+        <FAQ />
+        <Location />
+      </main>
+      <Footer />
+      <FloatingContactButtons />
+    </>
   );
 }

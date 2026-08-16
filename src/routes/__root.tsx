@@ -77,14 +77,38 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      {
+        title: "Celebs Resort Shoghi | Mountain View Resort in Himachal Pradesh",
+      },
+      {
+        name: "description",
+        content:
+          "Celebs Resort is a peaceful mountain retreat at 5,700 ft in Shoghi, Himachal Pradesh. Family & pet-friendly cottages, bamboo houses, valley views, multi-cuisine dining. Book your Himalayan escape on WhatsApp.",
+      },
+      {
+        name: "keywords",
+        content:
+          "Celebs Resort Shoghi, Resort in Shoghi, Hotels in Shoghi Himachal Pradesh, Mountain View Resort Shoghi, Family Resort near Shimla, Pet Friendly Resort Shoghi, Resort near Shoghi Railway Station, Himalayan Resort Shoghi",
+      },
+      { name: "author", content: "Celebs Resort" },
+      { property: "og:title", content: "Celebs Resort Shoghi | Mountain View Resort" },
+      {
+        property: "og:description",
+        content:
+          "A peaceful Himalayan mountain retreat in Shoghi, Himachal Pradesh. Cottages, bamboo houses, valley views and warm hospitality. Book on WhatsApp.",
+      },
       { property: "og:type", content: "website" },
+      { property: "og:locale", content: "en_IN" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
+      {
+        name: "twitter:title",
+        content: "Celebs Resort Shoghi | Mountain View Resort",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "A peaceful Himalayan mountain retreat in Shoghi, Himachal Pradesh. Book your escape on WhatsApp.",
+      },
     ],
     links: [
       {
@@ -92,6 +116,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: appCss,
       },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "canonical", href: "https://celebsresortshoghi.com/" },
     ],
   }),
   shellComponent: RootShell,
